@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel='stylesheet' type='text/css' href='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+</head>
+
+<body>
+
+    <div id="canvas-holder" style="width:40%">
+        <canvas id="chart-area" height="300", width="300"></canvas>
+    </div>
+
+</body>
+<script>
+
+    var ctx1 = document.getElementById('chart-area');
+
+    var options = {
+        responsive: true,
+        title: {
+            display: true,
+            position: "top",
+            text: "Pie Chart",
+            fontSize: 18,
+            fontColor: "#111"
+        },
+        legend: {
+            display: true,
+            position: "bottom",
+            labels: {
+                fontColor: "#333",
+                fontSize: 16
+            }
+        }
+    };
+
+
+    var data1 = {
+        labels: ["match1", "match2", "match3", "match4", "match5"],
+        datasets: [
+            {
+                label: "TeamA Score",
+                data: [10, 50, 25, 70, 40],
+                backgroundColor: [
+                    "#DEB887",
+                    "#A9A9A9",
+                    "#DC143C",
+                    "#F4A460",
+                    "#2E8B57"
+                ],
+                borderColor: [
+                    "#CDA776",
+                    "#989898",
+                    "#CB252B",
+                    "#E39371",
+                    "#1D7A46"
+                ],
+                borderWidth: [1, 1, 1, 1, 1]
+            }
+        ]
+    };
+
+    var chart1 = new Chart(ctx1, {
+        type: "pie",
+        data: data1,
+        options: options
+    });
+
+
+</script>
+
+</html>
