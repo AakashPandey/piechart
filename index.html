@@ -12,9 +12,7 @@
 
 <body>
 
-    <div id="canvas-holder" style="width:40%">
-        <canvas id="chart-area" height="300", width="300"></canvas>
-    </div>
+<canvas id="chart-area" height="300", width="300"></canvas>
 
 </body>
 <script>
@@ -40,13 +38,15 @@
         }
     };
 
+   var lab = ["Mi", "BPL", "Samsung", "Micromax", "Sanyo", "Kevin", "TCL", "Kodak", "Sony", "CloudWalker", "Fortex", "LG", "Shinco", "Onida", "VU", "Panasonic"];
+var val = [3, 1, 5, 2, 3, 4, 4, 1, 1, 2, 1, 2, 1, 1, 2, 1];
 
     var data1 = {
-        labels: ["match1", "match2", "match3", "match4", "match5"],
+        labels: lab,
         datasets: [
             {
                 label: "TeamA Score",
-                data: [10, 50, 25, 70, 40],
+                data: val,
                 backgroundColor: [
                     "#DEB887",
                     "#A9A9A9",
@@ -54,14 +54,6 @@
                     "#F4A460",
                     "#2E8B57"
                 ],
-                borderColor: [
-                    "#CDA776",
-                    "#989898",
-                    "#CB252B",
-                    "#E39371",
-                    "#1D7A46"
-                ],
-                borderWidth: [1, 1, 1, 1, 1]
             }
         ]
     };
